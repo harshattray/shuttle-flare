@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
 <style>
+.title { display: block; font-size: 200%; font-weight: bold; }
+
 .key {
   stroke-width: 1.5px;
   transition: fill 250ms linear, stroke 250ms linear;
@@ -10,6 +13,10 @@
 .key:hover {
   transition-delay: 0;
 }
+div.container {
+     display: flex;
+     justify-content: space-between;
+  }
 
 .key--white { fill: #fff; stroke: #777; }
 .key--black { fill: #333; stroke: #000; }
@@ -20,7 +27,22 @@
 <svg width="1200" height="900">
 </svg>
 <script src="https://d3js.org/d3.v4.min.js"></script>
-<script>
+
+<div class="foo container">
+  <span class="letter" data-letter="S">S</span>
+  <span class="letter" data-letter="H">H</span>
+  <span class="letter" data-letter="U">U</span>
+  <span class="letter" data-letter="T">T</span>
+  <span class="letter" data-letter="T">T</span>
+  <span class="letter" data-letter="L">L</span>
+  <span class="letter" data-letter="E">E</span>
+  <span class="letter" data-letter="F">F</span>
+  <span class="letter" data-letter="L">L</span>
+  <span class="letter" data-letter="A">A</span>
+  <span class="letter" data-letter="R">R</span>
+  <span class="letter" data-letter="E">E</span>
+</div>
+  <script>
 
 var svg = d3.select("svg"),
     width = +svg.attr("width"),
